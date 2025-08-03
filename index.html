@@ -1,31 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
-    <title>Flashcard</title>
+  <meta charset="UTF-8" />
+  <title>Flashcards Alura</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .categoria {
+      margin-top: 20px;
+    }
+
+    .flashcard {
+      background: white;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px 0;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .flashcard:hover {
+      background: #f9f9f9;
+    }
+
+    .resposta {
+      display: none;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .ativo .resposta {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <main>
-        <section id="container">
-            <!-- <article class="cartao">
-                <div class="cartao__conteudo">
-                    <h3>Programação</h3>
-                    <div class="cartao__conteudo__pergunta">
-                        <p>O que é JavaScript?</p>
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        <p>O JavaScript é uma linguagem de programação</p>
-                    </div>
-                </div>
-            </article> -->
-        </section>
-    </main>
-    <footer>
-        <p>Projeto desenvolvido pela Alura, sem fins lucrativos</p>
-    </footer>
-    <script src="app.js"></script>
-    <script src="perguntas.js"></script>
+
+  <h1>Flashcards</h1>
+
+  <div class="categoria">
+    <h2>Programação</h2>
+
+    <div class="flashcard">
+      <div class="pergunta">O que é Python?</div>
+      <div class="resposta">O Python é uma linguagem de programação.</div>
+    </div>
+
+    <div class="flashcard">
+      <div class="pergunta">O que é uma função?</div>
+      <div class="resposta">Uma função é um bloco de código que executa alguma tarefa.</div>
+    </div>
+  </div>
+
+  <div class="categoria">
+    <h2>Geografia</h2>
+
+    <div class="flashcard">
+      <div class="pergunta">Qual a capital da França?</div>
+      <div class="resposta">A capital da França é Paris.</div>
+    </div>
+  </div>
+
+  <div class="categoria">
+    <h2>Língua Inglesa</h2>
+
+    <div class="flashcard">
+      <div class="pergunta">Como se diz oi em inglês?</div>
+      <div class="resposta">Oi em inglês é HI (RAI).</div>
+    </div>
+  </div>
+
+  <p style="margin-top: 40px;">Projeto desenvolvido pela Alura, sem fins lucrativos</p>
+
+  <script>
+    const flashcards = document.querySelectorAll('.flashcard');
+
+    flashcards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('ativo');
+      });
+    });
+  </script>
+
 </body>
 </html>
