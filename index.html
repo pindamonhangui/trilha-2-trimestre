@@ -82,13 +82,10 @@
   <div class="categoria">
     <h2>Programação</h2>
     <div class="cards-container">
-      <!-- Resposta ao clicar -->
       <div class="flashcard" onclick="mostrarResposta(this)">
         <div class="pergunta">O que é Python?</div>
-        <div class="resposta">Python é uma linguagem de programação de alto nível, interpretada e de tipagem dinâmica.</div>
+        <div class="resposta">Linguagem de programação de alto nível, interpretada e de tipagem dinâmica.</div>
       </div>
-
-      <!-- Múltipla escolha -->
       <div class="flashcard">
         <div class="pergunta">Qual destes NÃO é um tipo de dado em JavaScript?</div>
         <div class="alternativas">
@@ -97,13 +94,23 @@
           <button onclick="verificar(this, true)">Banana</button>
         </div>
       </div>
-
-      <!-- Verdadeiro ou falso -->
       <div class="flashcard">
-        <div class="pergunta">HTML é uma linguagem de programação. (V/F)</div>
+        <div class="pergunta">HTML é linguagem de programação? (V/F)</div>
         <div class="alternativas">
           <button onclick="verificar(this, false)">Verdadeiro</button>
           <button onclick="verificar(this, true)">Falso</button>
+        </div>
+      </div>
+      <div class="flashcard" onclick="mostrarResposta(this)">
+        <div class="pergunta">O que significa CSS?</div>
+        <div class="resposta">Cascading Style Sheets (Folhas de Estilo em Cascata).</div>
+      </div>
+      <div class="flashcard">
+        <div class="pergunta">Qual a função do comando "git commit"?</div>
+        <div class="alternativas">
+          <button onclick="verificar(this, true)">Salvar mudanças no repositório</button>
+          <button onclick="verificar(this, false)">Enviar e-mail</button>
+          <button onclick="verificar(this, false)">Rodar o código</button>
         </div>
       </div>
     </div>
@@ -117,13 +124,24 @@
         <div class="pergunta">Qual a capital da França?</div>
         <div class="resposta">Paris</div>
       </div>
-
       <div class="flashcard">
         <div class="pergunta">O Brasil faz fronteira com quantos países?</div>
         <div class="alternativas">
           <button onclick="verificar(this, false)">8</button>
+          <button onclick="verificar(this, false)">11</button>
           <button onclick="verificar(this, true)">10</button>
-          <button onclick="verificar(this, false)">12</button>
+        </div>
+      </div>
+      <div class="flashcard" onclick="mostrarResposta(this)">
+        <div class="pergunta">Qual é o maior oceano do mundo?</div>
+        <div class="resposta">Oceano Pacífico</div>
+      </div>
+      <div class="flashcard">
+        <div class="pergunta">O Monte Everest está localizado em qual continente?</div>
+        <div class="alternativas">
+          <button onclick="verificar(this, true)">Ásia</button>
+          <button onclick="verificar(this, false)">Europa</button>
+          <button onclick="verificar(this, false)">América</button>
         </div>
       </div>
     </div>
@@ -137,13 +155,51 @@
         <div class="pergunta">Como se diz "obrigado" em inglês?</div>
         <div class="resposta">Thank you</div>
       </div>
-
       <div class="flashcard">
         <div class="pergunta">Traduza: "I am happy"</div>
         <div class="alternativas">
           <button onclick="verificar(this, false)">Eu sou rápido</button>
           <button onclick="verificar(this, true)">Eu estou feliz</button>
           <button onclick="verificar(this, false)">Eu tenho fome</button>
+        </div>
+      </div>
+      <div class="flashcard">
+        <div class="pergunta">Qual é o plural de "child"?</div>
+        <div class="alternativas">
+          <button onclick="verificar(this, false)">Childs</button>
+          <button onclick="verificar(this, true)">Children</button>
+          <button onclick="verificar(this, false)">Childes</button>
+        </div>
+      </div>
+      <div class="flashcard" onclick="mostrarResposta(this)">
+        <div class="pergunta">O que significa "Good night"?</div>
+        <div class="resposta">Boa noite</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ciências -->
+  <div class="categoria">
+    <h2>Ciências</h2>
+    <div class="cards-container">
+      <div class="flashcard">
+        <div class="pergunta">Qual planeta é conhecido como "planeta vermelho"?</div>
+        <div class="alternativas">
+          <button onclick="verificar(this, true)">Marte</button>
+          <button onclick="verificar(this, false)">Júpiter</button>
+          <button onclick="verificar(this, false)">Saturno</button>
+        </div>
+      </div>
+      <div class="flashcard" onclick="mostrarResposta(this)">
+        <div class="pergunta">Qual é o gás mais abundante na atmosfera?</div>
+        <div class="resposta">Nitrogênio</div>
+      </div>
+      <div class="flashcard">
+        <div class="pergunta">O Sol é uma...</div>
+        <div class="alternativas">
+          <button onclick="verificar(this, false)">Lua</button>
+          <button onclick="verificar(this, true)">Estrela</button>
+          <button onclick="verificar(this, false)">Planeta</button>
         </div>
       </div>
     </div>
@@ -168,4 +224,3 @@
   </script>
 </body>
 </html>
-
