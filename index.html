@@ -51,4 +51,121 @@
     }
     .resposta {
       display: none;
-      color
+      color: #C8E6C9;
+    }
+    .alternativas button {
+      display: block;
+      margin: 5px 0;
+      background: #607D8B;
+      color: white;
+      border: none;
+      padding: 8px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .alternativas button:hover {
+      background: #78909C;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #B0BEC5;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Flashcards Interativos</h1>
+
+  <!-- Programação -->
+  <div class="categoria">
+    <h2>Programação</h2>
+    <div class="cards-container">
+      <!-- Resposta ao clicar -->
+      <div class="flashcard" onclick="mostrarResposta(this)">
+        <div class="pergunta">O que é Python?</div>
+        <div class="resposta">Python é uma linguagem de programação de alto nível, interpretada e de tipagem dinâmica.</div>
+      </div>
+
+      <!-- Múltipla escolha -->
+      <div class="flashcard">
+        <div class="pergunta">Qual destes NÃO é um tipo de dado em JavaScript?</div>
+        <div class="alternativas">
+          <button onclick="verificar(this, false)">String</button>
+          <button onclick="verificar(this, false)">Number</button>
+          <button onclick="verificar(this, true)">Banana</button>
+        </div>
+      </div>
+
+      <!-- Verdadeiro ou falso -->
+      <div class="flashcard">
+        <div class="pergunta">HTML é uma linguagem de programação. (V/F)</div>
+        <div class="alternativas">
+          <button onclick="verificar(this, false)">Verdadeiro</button>
+          <button onclick="verificar(this, true)">Falso</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Geografia -->
+  <div class="categoria">
+    <h2>Geografia</h2>
+    <div class="cards-container">
+      <div class="flashcard" onclick="mostrarResposta(this)">
+        <div class="pergunta">Qual a capital da França?</div>
+        <div class="resposta">Paris</div>
+      </div>
+
+      <div class="flashcard">
+        <div class="pergunta">O Brasil faz fronteira com quantos países?</div>
+        <div class="alternativas">
+          <button onclick="verificar(this, false)">8</button>
+          <button onclick="verificar(this, true)">10</button>
+          <button onclick="verificar(this, false)">12</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inglês -->
+  <div class="categoria">
+    <h2>Língua Inglesa</h2>
+    <div class="cards-container">
+      <div class="flashcard" onclick="mostrarResposta(this)">
+        <div class="pergunta">Como se diz "obrigado" em inglês?</div>
+        <div class="resposta">Thank you</div>
+      </div>
+
+      <div class="flashcard">
+        <div class="pergunta">Traduza: "I am happy"</div>
+        <div class="alternativas">
+          <button onclick="verificar(this, false)">Eu sou rápido</button>
+          <button onclick="verificar(this, true)">Eu estou feliz</button>
+          <button onclick="verificar(this, false)">Eu tenho fome</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Projeto expandido com mais perguntas e formatos.
+  </div>
+
+  <script>
+    function mostrarResposta(card) {
+      const resposta = card.querySelector('.resposta');
+      resposta.style.display = resposta.style.display === 'block' ? 'none' : 'block';
+    }
+    function verificar(botao, correto) {
+      if (correto) {
+        botao.style.background = '#4CAF50';
+      } else {
+        botao.style.background = '#F44336';
+      }
+    }
+  </script>
+</body>
+</html>
+
